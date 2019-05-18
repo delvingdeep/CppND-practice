@@ -2,6 +2,7 @@
 * The capability of a class to derive properties and characteristics from another class is called Inheritance.
 *
 * Inheritance saves from writing class attributes from base class to derived class.
+* Inheritance saves from writing same code over and over again.
 */
 
 #include <iostream>
