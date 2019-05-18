@@ -40,7 +40,7 @@ class Pyramid
         float GetHeight() const { return height; }
 
         // other member function
-        void validator(float, float, float) {
+        void validator() {
             if (base_length <= 0 || base_width <= 0 || height <= 0) {
                 throw std::domain_error("Pyramid attributes should be positive.");
             }
@@ -61,12 +61,13 @@ class Pyramid
 
 
 int main() {
-    Pyramid py(5.0, 5.0, 3.0);
+    Pyramid py(5.0, 5.0, -3.0);
 
     std::cout << "Length of base of Pyramid : " << py.GetBaseLength() << "\n";
     std::cout << "Width of base of Pyramid : " << py.GetBaseWidth() << "\n";
     std::cout << "Height of Pyramid : " << py.GetHeight() << "\n";
     std::cout << "-------------------------------" << "\n";
+    py.validator();
     std::cout << "Area of Pyramid : " << py.area() << "\n";
     std::cout << "Volume of Pyramid : " << py.volume() << "\n";
 
