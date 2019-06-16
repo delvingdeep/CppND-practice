@@ -10,6 +10,7 @@ int main() {
     std::cout << "Enter the value for angle: ";
     std::cin >> angle;
 
+    // function has dereference variable in the signature, so reference the variable in the call
     function(&sine, &cosine, angle);
 
     std::cout << "Sine of the angle: " << sine << "\n";
