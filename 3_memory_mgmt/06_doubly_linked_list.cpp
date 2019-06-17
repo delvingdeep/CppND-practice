@@ -36,15 +36,16 @@ namespace custom {
         list() : head(NULL), tail(NULL) {}
         ~list();
 
+        /* ---- method declaration --- */
         void push_front(T);
         void push_back(T);
         T pop_back();
         T pop_front();
-
         bool empty() const { return (!head || !tail); }
         void print();
     };
 
+    /* --- class method definition --- */
     template<typename T>
     void list<T>::push_front(T value) {
         head = new node(value, NULL, head);
@@ -134,9 +135,15 @@ namespace custom {
     }
 }
 
-
+/* --- main function --- */
 int main() {
     custom::list<int> list;
     list.push_back(8);
+    list.push_back(7);
+    list.push_front(6);
+    std::cout << "List contains: ";
+    list.print();
+    std::cout << "Removing last element: " << list.pop_back() << "\n";
+    std::cout << "Now List contains: ";
     list.print();
 }
