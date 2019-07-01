@@ -30,6 +30,8 @@ int stackFunction(int x) {
 - there is a limit on stack size (OS-dependent)
 - explicit de-allocation of variables is not mandatory
 
+Static memory is allocated at complie time on Stack
+
 --------------------------------------------------------------------------------------------------------------------------
 
 ### `heap`
@@ -59,3 +61,5 @@ int main() {
 - realloc() is used for the resizing of variables
 - variables can be accessed globally
 - efficient use of space is not guaranteed, memory can become fragmented over time when blocks of memory are allocated, then freed
+
+Dynamic memory is allocated at the runtime on heap, also called FreeStore
