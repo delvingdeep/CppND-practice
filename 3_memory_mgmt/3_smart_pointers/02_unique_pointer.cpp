@@ -12,13 +12,13 @@ int main() {
     ptr->print();
 
     // get memory address
-    std::cout << "ptr : " << ptr.get() << "\n";
+    std::cout << "ptr : " << ptr.get() << "\n" << "\n";
 
     // move ptr to another pointer
     std::unique_ptr<A>  new_ptr = std::move(ptr);
     new_ptr->print();
     std::cout << "ptr : " << ptr.get() << "\n";
-    std::cout << "new_ptr : " << new_ptr.get() << "\n";
+    std::cout << "new_ptr : " << new_ptr.get() << "\n" << "\n";
 
     // move new_ptr to another pointer
     std::unique_ptr<A>  latest_ptr = std::move(new_ptr);
