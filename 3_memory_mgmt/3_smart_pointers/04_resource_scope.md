@@ -97,7 +97,7 @@ int main() {
 ---
 Summary
 
-``cpp
+```cpp
 int val;
 // this variable val is defined in global namespace
 // which means, its scope is global. It exists
