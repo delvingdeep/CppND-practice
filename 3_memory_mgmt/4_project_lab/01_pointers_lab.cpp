@@ -36,6 +36,47 @@ class PtrDetails
 };
 
 template <class T>
-bool operator == (const PtrDetails &obj1, const PtrDetails &obj2) {
-    // TODO implement logic
+bool operator == (const PtrDetails<T> &obj1, const PtrDetails<T> &obj2) {
+    
+    // if both pointers have same size
+    if(obj1.arr_size == obj2.arr_size) {
+        for(int i = 0; i < obj1.arr_size; i++) {
+            T element1 = *(obj1.memPtr+i);
+            T element2 = *(obj2.memPtr+i);
+            
+            // if pointer element is same
+            if(element1 != element2) { return false; }
+            else { return true; }
+        }
+    }
+    else { return false; }      // both pointers have different size
+    return false;
+}
+
+int main() {
+
+    int *ptr1 = new int(3);
+    int *ptr2 = new int(3);
+    int *ptr3 = new int(4);
+    int *ptr4 = new int(5);
+
+    PtrDetails<int> ptr_details_1(ptr1, 1);
+    PtrDetails<int> ptr_details_2(ptr2, 1);
+    PtrDetails<int> ptr_details_3(ptr3, 1);
+    PtrDetails<int> ptr_details_4(ptr4, 1);
+
+    std::cout << "For Ptr1 and Ptr2 : ";
+    if(ptr_details_1 == ptr_details_2) { std::cout << "Details match" << std::endl; }
+    else { std::cout << "Details don't match" << std::endl; }
+
+    std::cout << "For Ptr3 and Ptr4 : ";
+    if(ptr_details_3 == ptr_details_4) { std::cout << "Details match" << std::endl; }
+    else { std::cout << "Details don't match" << std::endl; }
+
+    delete ptr1;
+    delete ptr2;
+    delete ptr3;
+    delete ptr4;
+
+    return 0;
 }
