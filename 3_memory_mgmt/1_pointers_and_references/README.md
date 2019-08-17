@@ -7,4 +7,4 @@
 - References are alias for other objects 
 - Literally, References refer to whatever is stored at a particular memory address
 - When reference is created it cannot be re - initialized
-- References cannot be initialized to NULL value,
+- References cannot be initialized to NULL value
