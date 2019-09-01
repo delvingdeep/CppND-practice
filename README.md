@@ -18,3 +18,9 @@ To run any program:
 $ g++ -std=c++17 main.cpp
 $ ./a.out
 ```
+
+To run any multi-threaded program:
+```bash
+$ g++ -std=c++17 main.cpp -pthread
+$ ./a.out
+```
