@@ -46,3 +46,17 @@ Different states of a thread:
 
 
 _Note:_ A major difference between a process and a thread is that each process has its own address space, while a thread does not require a new address space to be created.
+
+##### Parallelism in threads
+
+Threads follows "Fork-Join-Parallelism" concept. The basic mechanism of this concept follows a simple three-step pattern:
+
+- Split the flow of execution into a parallel thread ("fork")
+- Perform some work in both the main thread and the parallel thread
+- Wait for the parallel thread to finish and unite the split flow of execution again ("join")
+
+<center>
+<img src="../images/fork_join.png" alt="fork-join program flow" width=600 height=500>
+</center>
+
+Once the work is completed in the worker threads, the flow of execution is united again in the main function using the `join()` command
