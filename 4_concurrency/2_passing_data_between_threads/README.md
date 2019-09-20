@@ -1,7 +1,6 @@
-#### Thread : Promise and Future
+### Thread : Promise and Future
 
-The method for passing data to a thread during thread construction relies mainly on following two types:
-Passing arguments using 
+The method for passing data to a thread during thread construction can be done in two ways:
 - Variadic template
 - Lamdba (arguments are captured by value or reference)
 
@@ -11,3 +10,4 @@ The sending end of the channel is called __promise__ while the receiving end is 
 
 In the C++ standard, the class template `std::promise` provides a convenient way to store a value or an exception that will be acquired asynchronously at a later time via a `std::future` object. Each `std::promise` object is meant to be used _only_ a __single time__.
 
+##### Library : `<future>`
