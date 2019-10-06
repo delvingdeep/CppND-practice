@@ -7,12 +7,12 @@ class Vehicle
   public:
     // default constructor
     Vehicle() : _id(0) {
-        std::cout << "Vehicle #" << id << " Default constructor called" << std::endl;
+        std::cout << "Vehicle #" << _id << " Default constructor called" << std::endl;
     }
 
     // initializing constructor
     Vehicle(int id) : _id(id) {
-        std::cout << "Vehicle #" << id << " Initialzing constructor called" << std::endl; 
+        std::cout << "Vehicle #" << _id << " Initialzing constructor called" << std::endl; 
     }
 
     // setter and getter
