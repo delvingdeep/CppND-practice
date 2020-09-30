@@ -9,9 +9,9 @@
 #include <iostream>
 #include <string>
 
-class BankAccount
+class BankAccount.     // class declaration
 {
-  private:
+  private:.           // access specifier
       // declare member variables
       std::string acc_name;
       int acc_number;
@@ -65,5 +65,5 @@ int main() {
     std::cout << "Account Name : " << acc1.getAccName() << "\n";
     std::cout << "Account Number : " << acc1.getAccNumber() << "\n";
     std::cout << "Account Balance : " << acc1.getAccBalance() << "\n";
-    
+    return 0
 }
